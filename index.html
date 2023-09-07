@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>JavaScript Login Page(Mini Project In Hindi)</h2><br>
+    <div class="login">
+        <form id="login" method="get" action="#">
+            <lable><b>User Name</b></lable>
+
+            <input type="text" name="Uname" id="Uname" placeholder="Username">
+            <br><br>                                     
+            <lable><b>Password</b></lable>
+
+            <input type="password" name="Pass" id="Pass" placeholder="Password">
+            <br><br>
+            <input type="button" name="log" id="log" value="Log In Here" onclick="login();">
+            <br><br>
+            <input type="checkbox" id="check">
+            <span>Remember me</span>
+            <br><br>
+            forgot <a href="#">Password</a>
+        </form>
+    </div>
+    <script type="text/JavaScript">
+        function login() {
+        var Username=document.getElementById('Uname').value;
+        var Password=document.getElementById('Pass').value;
+        if(Username=='dev' && Password=='123'){
+            console.log("Login Successfully");
+            location.assign('http://127.0.0.1:5500/welcome_page.html');
+        }else{
+            window.alert('Wrong UserName and Password!');
+        }
+        console.log(Username);
+        console.log(Password);
+
+        }
+        
+    </script>
+</body>
+</html>
